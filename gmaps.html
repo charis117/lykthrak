@@ -1,20 +1,45 @@
-
-
-<meta charset="UTF-8">
+<!DOCTYPE html>
 <html>
-<font face="Arial">
-<title>CHRIS PC</title>
-<h1>Γεία σας!<h1>
-<p>Κατάφερατε και συνδεθήκατε σε αυτόν τον υπολογιστή!</p>
-<br>
-<font face="Impact">Imapact</font>
-<img src="image.png"></img>
-<br>
-<a href="Server.java">Server Source Code</a>
-</font>
+<body>
+
+<h1>My First Google Map</h1>
+
+<button onclick="sanga()">Change center</button>
+
+<div id="map" style="width:400px;height:400px;background:yellow"></div>
 
 <script>
-alert("Hello!")
+function sanga(){
+//alert(document.getElementById("map"));
+long+=0.01;
+lat+=0.01;
+map.setCenter(new google.maps.LatLng(lat, long));
+marker.setPosition(new google.maps.LatLng(lat, long));
+}
+function myMap() {
+//alert("My map emabled");
+var mapOptions = {
+    center: new google.maps.LatLng(38.0765, 22.453),
+    zoom: 10,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+}
+map = new google.maps.Map(document.getElementById("map"), mapOptions);
+alert(map.getCenter().lng()+"-"+map.getCenter().lat());
+long=22;
+lat=38;
+marker = new google.maps.Marker({
+          position: new google.maps.LatLng(38.0765, 22.453),
+          map: map,
+          title: 'Hello World!'
+        });
+}
 </script>
 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+</body>
 </html>
