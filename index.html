@@ -1,39 +1,111 @@
 <!DOCTYPE html>
 <html>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 
 <head>
+
 <style>
+
+
 .center {
- margin: auto;
- width: 80%;
- border: none;
+	margin: auto;
+	width: 50%;
+	text-align:center;
+
 
 }
 
+
+body{
+margin:0;
+}
 html {
-  background-image: url("mbg.png");
+	background-image: url("mbg.png");
+	
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	font-family:Calibri;
+  
+}
 
-  /* Full height */
-  height: 100%; 
+.topnav {
+	overflow: hidden;
+	background-color: #FF0000;
+	
+	
+}
 
-  /* Center and scale the image nicely */
-  background-repeat: no-repeat;
-  background-size: cover;
+.menu{
+	margin:8px;
+	float:left;
+	cursor:pointer;
+}
+
+
+.h{
+	float:none;
+	text-align:center;
+	margin:10px;
+	font-weight: bolder;
+	font-size:30px;
+}
+
+h2{
+	text-align:center;
+	float:none;
 }
 
 </style>
+
+<link rel="stylesheet" type="text/css" href="sidebar.css">
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
 </head>
 
 
 <body>
 <title>Λύκειο Θρακομακεδόνων</title>
 
+<!--Πλαΐνό μενού-->
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Πρόγραμμα</a>
+  <a href="#">Καθηγητές</a>
+  <a href="#">Ώρες</a>
+  <a href="#">Ανακοινώσεις</a>
+  <a href="#">Χάρτης</a>
+  <a href="#">Ρυθμίσεις</a>
+</div>
 
-<h1><u>Καλωσήρθατε στην ιστοσελίδα</u></h1>
-<div class="center"><iframe id="news "src="news.html" allowtransparency="true"/></div>
-<a href="w3ctest.html">HERE</a>
+
+<!--Επικεφαλίδα-->
+<div class="topnav">
+	<img onclick="openNav()" class="menu" width="40px" height="40px" src="menu.png">
+	<div class="h">Λύκειο Θρακομακεδόνων</div>
+</div>
+
+
+<!--Περιεχόμενο-->
+<h2>Καλωσήρθατε στην ιστοσελίδα</h2>
+
+<div class="center">
+	<a href="w3ctest.html">HERE</a>
+	<p>HELLO</p>
+	<p>Another paragraprh</p>
+	<iframe id="news" style="border:none;" src="news.html" allowtransparency="true"/>
+</div>
+
 
 
 </body>
