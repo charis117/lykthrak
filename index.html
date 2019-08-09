@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
+ <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+    <meta name='apple-mobile-web-app-capable' content='yes' />
 
 <head>
 
@@ -18,7 +19,8 @@
 
 
 body{
-margin:0;
+	margin:0;
+	touch-action: manipulation;
 }
 html {
 	background-image: url("mbg.png");
@@ -34,7 +36,7 @@ html {
 .topnav {
 	overflow: hidden;
 	background-color: #FF0000;
-	
+	width:100%;
 	
 }
 
@@ -56,6 +58,14 @@ html {
 h2{
 	text-align:center;
 	float:none;
+}
+
+p {
+  display: block;
+  margin-top: 0.01em;
+  margin-bottom: 0.01em;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 </style>
@@ -96,7 +106,7 @@ function closeNav() {
 	<div class="h">Λύκειο Θρακομακεδόνων</div>
 </div>
 
-
+<div onclick="closeNav()">
 <!--Περιεχόμενο-->
 <h2>Καλωσήρθατε στην ιστοσελίδα</h2>
 
@@ -108,6 +118,6 @@ function closeNav() {
 </div>
 
 
-
+</div>
 </body>
 </html>
